@@ -350,3 +350,13 @@ img {
   background: #FFFFFF;
   color: #17A2B8;
 }
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 50%;
+  }
+  to {
+    margin-left: 0%;
+    width: 50%;
+  }
+}
