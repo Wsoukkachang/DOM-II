@@ -9,11 +9,22 @@ navArea.forEach(content => {
   event.target.style.color = "orange"; })
 });
 
-// #2 using drag, drag anything over 'p' to console log action
+// #2 using drag, drag anything over paragraphs to console log action
 const dragOverP = document.querySelectorAll('p');
 
 dragOverP.forEach( p => {
     p.addEventListener('dragleave', function(){
-        console.log(`This object is over a paragraph`);
+        console.log(`This object you are dragging is over a paragraph`);
+        event.stopPropagation();
     })
 });
+
+// #3 using click, click on buttons to console log action
+let buttons= document.querySelectorAll('.content-pick .btn');
+
+buttons.forEach(content => {
+    content.addEventListener('click', function(event){
+        console.log('Clicked Button');
+        event.stopPropagation();
+    })
+})
