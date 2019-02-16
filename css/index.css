@@ -145,6 +145,7 @@ h5 {
 }
 h1 {
   font-size: 4rem;
+  color: var(--myColor);
 }
 h2 {
   font-size: 3.2rem;
@@ -349,6 +350,9 @@ img {
 .home .content-pick .destination .btn:hover {
   background: #FFFFFF;
   color: #17A2B8;
+}
+html {
+  --myColor: black;
 }
 @keyframes slidein {
   from {

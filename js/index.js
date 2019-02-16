@@ -1,12 +1,17 @@
 // Your code goes here
 
 // #1 using mouseover, hover over nav to change color to orange
-const navArea = document.querySelectorAll('.nav'); // selecting nav area
+const navArea = document.querySelectorAll('.nav a'); // selecting nav area
 
 navArea.forEach(content => {
     content.addEventListener('mouseover', function(event){
         console.log('You hovered over the nav');
         event.target.style.color = "orange";
+        TweenMax.to(navArea[0], 2, {x:-400, ease:Bounce.easeOut});// splits nav -- moves to left
+        TweenMax.to(navArea[1], 2, {x:-400, ease:Bounce.easeOut});
+        TweenMax.to(navArea[2], 2, {x:-100, ease:Bounce.easeOut});
+        TweenMax.to(navArea[3], 2, {x:-100, ease:Bounce.easeOut});
+        TweenLite.to(content, 2, {rotationX:45, scaleX:0.8, z:-300});
         event.preventDefault(); //stops nav from going to new page
     })
 });
@@ -38,6 +43,7 @@ let images = document.querySelectorAll('.container img'); //selecting images
 images.forEach(content => {
     content.addEventListener('dblclick', function(event){
         console.log('You double clicked a image');
+        
         event.target.style.width = "50%";
     })
 })
@@ -70,5 +76,17 @@ h2s.forEach(content => {
         event.target.style.animationIterationCount = "infinite";
         event.target.style.animationDirection = "alternate";
     })
+})
+
+// #8 using dblclick, when h1 isdouble clicked, console log then starts animations
+let h1main = document.querySelector('.main-navigation h1'); //selecting h1
+
+h1main.addEventListener('dblclick', function(event){
+    console.log('You double clicked on a h1!');
+    TweenMax.to(".logo-heading", 1, {opacity:0.6});
+    TweenMax.to(".logo-heading", 3, {x:300});
+    TweenMax.to(".logo-heading", 3, {rotation:360, scale:1.4});
+    TweenMax.to("html", 0.5, {"--myColor":"green", yoyo:true, repeat:-1}); //changes color from black to green-- repeats
+    TweenLite.to(h1main, 2, {rotationX:45, scaleX:0.8, z:-300});
 })
 
