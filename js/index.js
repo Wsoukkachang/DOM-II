@@ -6,7 +6,7 @@ const navArea = document.querySelectorAll('.nav a'); // selecting nav area
 navArea.forEach(content => {
     content.addEventListener('mouseover', function(event){
         console.log('You hovered over the nav');
-        event.target.style.color = "orange";
+        event.target.style.color = "orange"; // changes nav object to orange
         TweenMax.to(navArea[0], 2, {x:-400, ease:Bounce.easeOut});// splits nav -- moves to left
         TweenMax.to(navArea[1], 2, {x:-400, ease:Bounce.easeOut});
         TweenMax.to(navArea[2], 2, {x:-100, ease:Bounce.easeOut});
@@ -43,7 +43,6 @@ let images = document.querySelectorAll('.container img'); //selecting images
 images.forEach(content => {
     content.addEventListener('dblclick', function(event){
         console.log('You double clicked a image');
-        
         event.target.style.width = "50%";
     })
 })
