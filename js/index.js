@@ -1,7 +1,7 @@
 // Your code goes here
 
 // #1 using mouseover, hover over nav to change color to orange and split
-const navArea = document.querySelectorAll('.nav a'); // selecting nav area
+const navArea = document.querySelectorAll('.nav a'); // selecting nav area 
 
 navArea.forEach(content => {
     content.addEventListener('mouseover', function(event){
@@ -92,7 +92,7 @@ h1main.addEventListener('dblclick', function(event){
 // #9 using mouseover, hover over footer "copyright text" to change text and start animation
 let copyrightText = document.querySelector('footer p'); //selecting footer p
 
-console.log(copyrightText);
+// console.log(copyrightText);
 
 copyrightText.addEventListener('mouseover', function(event){
     console.log('You hovered over a footer');
